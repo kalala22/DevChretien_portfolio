@@ -1,47 +1,32 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <!-- Header components -->
+  <header class="flex items-center p-4 bg-gray-800 text-white">
+    <div class="flex items-center justify-between w-full">
+      <!-- Logo à gauche -->
+      <div>
+        <a class="text-xl font-bold">DevChretien</a>
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <!-- Liens à droite -->
+      <div class="flex items-center space-x-6">
+        <div v-for="link in links" :key="link.name" class="text-lg">
+          <a href="#">{{ link.name }}</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <main></main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script setup>
+import { ref } from 'vue'
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+const links = ref([
+  { name: 'Accueil', url: '#' },
+  { name: 'A propos', url: '#' },
+  { name: 'Projets', url: '#' },
+  { name: 'Compétences', url: '#' },
+  { name: 'Contact', url: '#' },
+])
+</script>
