@@ -25,5 +25,5 @@
 </template>
 
 <script setup>
-import myPic from '@/assets/img/my_pic.jpeg'
+import myPic from '@/assets/img/my_pic.png'
 </script>
