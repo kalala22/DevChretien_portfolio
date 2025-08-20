@@ -47,25 +47,41 @@ const links = ref([
       <div class="md:hidden">
         <button @click="toggleMenu" class="text-primary focus:outline-none">
           <!-- Icône Hamburger (s'affiche si le menu est fermé) -->
-          <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
+          </svg> -->
           <!-- Icône Fermer 'X' (s'affiche si le menu est ouvert) -->
-          <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
+          </svg> -->
+          <div v-if="!isMenuOpen" class="text-2xl">
+            <!-- Icône Hamburger -->
+           <font-awesome-icon icon="bars" />
+          </div>
+          
         </button>
       </div>
 
     </nav>
+
+    <!-- <div v-else class="w-6 h-6">
+            <font-awesome-icon icon="x" />
+          </div> -->
 
     <!-- Menu Mobile en plein écran (Overlay) -->
     <!-- 'v-if="isMenuOpen"' : ce bloc n'existe dans le DOM que si le menu est ouvert -->
     <div v-if="isMenuOpen" class="md:hidden fixed inset-0 bg-secondary z-40 flex flex-col items-center justify-center space-y-8">
       <div v-for="link in links" :key="link.name" class="text-primary text-3xl font-bold">
         <!-- Cliquer sur un lien ferme aussi le menu -->
+          <div class="absolute top-4 right-4">
+            <button @click="toggleMenu" class="text-primary focus:outline-none">
+              <font-awesome-icon icon="x" />
+            </button> 
+         </div>
         <a href="#" @click="toggleMenu">{{ link.name }}</a>
       </div>
+      
     </div>
+    
   </header>
 </template>
