@@ -32,7 +32,7 @@ onMounted(() => {
                         Contactez-moi
                     </button>
                     <button class="bg-primary text-secondary px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-300">
-                        Voir mon CV
+                        Voir mon CV<font-awesome-icon icon="download" />
                     </button>
                 </div>
             </div>
