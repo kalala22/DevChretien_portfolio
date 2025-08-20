@@ -61,7 +61,8 @@ const links = ref([
 
     <!-- Menu Mobile en plein écran (Overlay) -->
     <!-- 'v-if="isMenuOpen"' : ce bloc n'existe dans le DOM que si le menu est ouvert -->
-    <div v-if="isMenuOpen" class="md:hidden fixed inset-0 bg-secondary z-40 flex flex-col items-center justify-center space-y-8">
+    <transition name="fade-in">
+         <div v-if="isMenuOpen" class="md:hidden fixed inset-0 bg-secondary z-40 flex flex-col items-center justify-center space-y-8">
       <div v-for="link in links" :key="link.name" class="text-primary text-3xl font-bold">
         <!-- Cliquer sur un lien ferme aussi le menu -->
           <div class="absolute top-4 right-4">
@@ -73,6 +74,26 @@ const links = ref([
       </div>
       
     </div>
+    </transition>
+   
     
   </header>
 </template>
+
+<style>
+.fade-in-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* L'état de FIN de l'animation */
+.fade-in-enter-to {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* La durée et la courbe de l'animation */
+.fade-in-enter-active {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Une transition avec un petit effet "ressort" */
+}
+</style>
