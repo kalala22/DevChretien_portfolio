@@ -11,6 +11,5 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 library.add(faUserSecret, faBars, faTimes, faEnvelope, faGithub)
 
 // Enregistrez le composant FontAwesomeIcon globalement
-App.component('font-awesome-icon', FontAwesomeIcon)
 
-createApp(App).mount('#app')
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
