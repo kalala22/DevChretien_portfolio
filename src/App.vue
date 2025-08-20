@@ -2,6 +2,9 @@
 import Navbar from './components/NavbarView.vue'
 import Home from './components/HomeView.vue'
 import About from './components/AboutSectionView.vue'
+import Competence from './components/CompetenceView.vue'
+// import Project from './components/ProjectView.vue'
+// import Contact from './components/ContactView.vue'
 </script>
 
 
@@ -19,13 +22,15 @@ import About from './components/AboutSectionView.vue'
       </section>
       <section id="competence">
         <!-- Compétences section will go here -->
-
+        <Competence />
       </section>
       <section id="project">
         <!-- Projets section will go here --> 
+        <!-- <Project /> -->
       </section>
       <section id="contact">
         <!-- Contact section will go here -->
+        <!-- <Contact /> -->
       </section>
     </div>
     
