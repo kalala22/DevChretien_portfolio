@@ -1,5 +1,5 @@
 <template>
-    <div id="about" class="flex flex-col items-center justify-center bg-secondary p-5 py-20">
+    <div id="about" class="flex flex-col items-center justify-center bg-secondary p-5 py-20 mt-10">
     
         
             <div class="absolute flex items-center justify-center opacity-10">

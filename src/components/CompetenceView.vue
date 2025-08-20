@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section id="competence" class="flex flex-col items-center justify-center bg-background p-5 py-20">
+        <section id="competence" class="flex flex-col items-center justify-center bg-background p-5 py-20 mt-28">
             <div class="absolute flex items-center justify-center opacity-10">
                 <font-awesome-icon icon="cogs" class="text-primary text-[15rem] md:text-[15rem]" />
             </div>
@@ -12,9 +12,14 @@
                     En tant que développeur web fullstack, je maîtrise les technologies front-end et back-end pour créer des applications web modernes et performantes. Mon expertise couvre le développement d'interfaces utilisateur interactives, la gestion de bases de données et l'intégration d'API.
                 </p>
             </div>
+
+        </section>
+        <section>
+            <Skils/>
         </section>
     </div>
 </template>
 
-<script>
+<script setup>
+    import Skils from './SkilsView.vue'
 </script>
