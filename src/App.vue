@@ -7,8 +7,11 @@ import Home from './components/HomeView.vue'
 <template>
   <!-- Header components -->
    <div>
-    <Navbar />
-    <Home />
+    <div class="">
+      <Navbar/>
+      <Home />
+    </div>
+    
    </div>
 </template>
 

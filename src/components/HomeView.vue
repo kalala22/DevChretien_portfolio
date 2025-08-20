@@ -1,8 +1,20 @@
+<script setup>
+import myPic from '@/assets/img/my_pic.png'
+import { ref, onMounted } from 'vue';
+
+const isLoaded = ref(false);
+
+onMounted(() => {
+  isLoaded.value = true;
+});
+</script>
+
 <template>
  
     <main class="min-h-screen bg-background flex items-center justify-center p-4">
-  
-        <div class="flex flex-col md:flex-row items-center justify-center gap-16 max-w-7xl">
+
+        <transition name="fade-in" >
+            <div v-if="isLoaded" class="flex flex-col md:flex-row items-center justify-center gap-16 max-w-7xl">
     
             
             <div class="text-center md:text-left space-y-4 text-primary order-2 md:order-1">
@@ -26,15 +38,32 @@
             </div>
 
            
-            <div class="order-1 md:order-2 w-60 h-60 md:w-[30%] md:h-[30%] flex-shrink-0">
-                <img :src="myPic" alt="Ma photo" class="w-full h-full object-cover shadow-lg"/>
+            <div class="order-1 md:order-2 w-60 h-60 md:w-[40%] md:h-[40%] flex-shrink-0">
+                <img :src="myPic" alt="Ma photo" class="w-full h-full object-cover"/>
             </div>
 
         </div>
   
+        </transition>
+
+       
     </main>
 </template>
 
-<script setup>
-import myPic from '@/assets/img/my_pic.png'
-</script>
+<style>
+.fade-in-enter-from {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/* L'état de FIN de l'animation */
+.fade-in-enter-to {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* La durée et la courbe de l'animation */
+.fade-in-enter-active {
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Une transition avec un petit effet "ressort" */
+}
+</style>

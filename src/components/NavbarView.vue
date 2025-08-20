@@ -46,14 +46,7 @@ const links = ref([
       <!-- 'md:hidden' : visible uniquement sur les écrans plus petits que 'md' -->
       <div class="md:hidden">
         <button @click="toggleMenu" class="text-primary focus:outline-none">
-          <!-- Icône Hamburger (s'affiche si le menu est fermé) -->
-          <!-- <svg v-if="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg> -->
-          <!-- Icône Fermer 'X' (s'affiche si le menu est ouvert) -->
-          <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg> -->
+          
           <div v-if="!isMenuOpen" class="text-2xl">
             <!-- Icône Hamburger -->
            <font-awesome-icon icon="bars" />
@@ -64,9 +57,7 @@ const links = ref([
 
     </nav>
 
-    <!-- <div v-else class="w-6 h-6">
-            <font-awesome-icon icon="x" />
-          </div> -->
+   
 
     <!-- Menu Mobile en plein écran (Overlay) -->
     <!-- 'v-if="isMenuOpen"' : ce bloc n'existe dans le DOM que si le menu est ouvert -->
