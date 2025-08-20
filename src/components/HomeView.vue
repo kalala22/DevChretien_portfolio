@@ -1,5 +1,6 @@
 <script setup>
 import myPic from '@/assets/img/my_pic.png'
+import BoutonCv from '@/components/BoutonCv.vue'
 import { ref, onMounted } from 'vue';
 
 const isLoaded = ref(false);
@@ -31,9 +32,7 @@ onMounted(() => {
                     <button class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300">
                         Contactez-moi
                     </button>
-                    <button class="bg-primary text-secondary px-6 py-3 rounded-lg hover:bg-blue-200 transition-colors duration-300">
-                        Voir mon CV<font-awesome-icon icon="download" />
-                    </button>
+                    <BoutonCv/>
                 </div>
             </div>
 
