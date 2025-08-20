@@ -29,8 +29,9 @@ onMounted(() => {
                     Explorez mes projets et compétences pour en savoir plus sur mon travail.
                 </p>
                 <div class="flex flex-row sm:flex-row justify-center md:justify-start gap-4">
-                    <button class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300">
-                        Contactez-moi
+                    <button class="bg-red-600 text-white px-2 py-3 rounded-lg hover:bg-accent transition-colors duration-300">
+                    <font-awesome-icon icon="envelope" />    
+                    Contactez-moi
                     </button>
                     <BoutonCv/>
                 </div>
