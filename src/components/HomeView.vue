@@ -12,7 +12,7 @@ onMounted(() => {
 
 <template>
  
-    <main class="min-h-screen bg-background flex items-center justify-center p-4">
+    <main id="home" class="min-h-screen flex items-center justify-center p-4">
 
         <transition name="fade-in" >
             <div v-if="isLoaded" class="flex flex-col md:flex-row items-center justify-center gap-16 max-w-7xl">

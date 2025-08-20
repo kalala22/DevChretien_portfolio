@@ -12,6 +12,7 @@ export default {
         secondary: '#111927', // Blue Gray
         accent: '#500F1C', // Red
         background: '#0D1520', // Blue
+        decoration: '#C2E6FF', // Light Gray
       },
     },
   },

@@ -11,11 +11,11 @@ const toggleMenu = () => {
 };
 
 const links = ref([
-  { name: 'Accueil', url: '#' },
-  { name: 'A propos', url: '#' },
-  { name: 'Projets', url: '#' },
-  { name: 'Compétences', url: '#' },
-  { name: 'Contact', url: '#' },
+  { name: 'Accueil', href: '#home' },
+  { name: 'A propos', href: '#about' },
+  { name: 'Compétences', href: '#competence' },
+  { name: 'Projets', href: '#project' },
+  { name: 'Contact', href: '#contact' },
 ])
 </script>
 
@@ -38,7 +38,7 @@ const links = ref([
       <!-- 'hidden md:flex' : caché sur mobile, devient un flex container à partir de la taille 'md' -->
       <div class="hidden md:flex items-center space-x-8">
         <div v-for="link in links" :key="link.name" class="text-primary text-lg border-b-2 border-transparent hover:border-red-600 transition-colors duration-300">
-          <a href="#">{{ link.name }}</a>
+          <a :href="link.href">{{ link.name }}</a>
         </div>
       </div>
 
