@@ -57,7 +57,8 @@ const projects = ref([
   {
     id: 2,
     title: 'Project SunySide',
-    description: 'Description of Project 2',
+    description:
+      "Sunnyside est une agence créative à service complet spécialisée dans l'aide à la croissance rapide des marques. Ce projet est une page de destination pour l'agence Sunnyside, utilisant 'Frontend Mentor' comme source d'inspiration.",
     image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
     liveDemo: 'https://sunny-side-agency.onrender.com',
     badges: ['HTML', 'CSS'],
