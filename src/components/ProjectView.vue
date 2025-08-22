@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center bg-background p-5 py-20 mt-10">
     <h2 class="text-primary text-3xl md:text-5xl uppercase">
-      Mes <span class="font-extrabold">Project</span>
+      Mes <span class="font-extrabold">Projects</span>
     </h2>
   </div>
 
@@ -47,46 +47,46 @@ import BoutonSeeProject from './BoutonSeeProject.vue'
 const projects = ref([
   {
     id: 1,
-    title: 'Application clone Twitter(x)',
-    description:
-      'Réalisation d’un clone de X (anciennement Twitter) avec le framework AdonisJS. Le projet comprend la création d’interfaces utilisateur statiques, l’intégration de données dynamiques via des contrôleurs et modèles.',
-    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
-    liveDemo: 'https://twitter-clone-kadea.vercel.app/',
-    badges: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    id: 2,
     title: 'Projet Portfolio',
     description:
       'Création d’un site web statique en HTML et CSS dans le cadre de mes premières semaines de formation à Kadea. Ce projet m’a permis d’apprendre à structurer une page web et à la styliser, en mettant en pratique les bases du développement front-end',
     image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
-    liveDemo: 'https://devchretien-portfolio.vercel.app/',
+    liveDemo: 'https://two025-dev-matin-projet-portfolio.onrender.com',
+    badges: ['HTML', 'CSS'],
+  },
+  {
+    id: 2,
+    title: 'Project SunySide',
+    description: 'Description of Project 2',
+    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    liveDemo: 'https://sunny-side-agency.onrender.com',
     badges: ['HTML', 'CSS'],
   },
   {
     id: 3,
-    title: 'Project SunySide',
-    description: 'Description of Project 2',
+    title: 'Project Clone Netflix',
+    description: 'Description of Project 3',
     image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
-    liveDemo: 'https://devchretien-portfolio.vercel.app/',
-    badges: ['HTML', 'CSS'],
+    liveDemo: '',
+    badges: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS'],
   },
   {
     id: 4,
-    title: 'Project 4',
-    description: 'Description of Project 2',
+    title: 'Project Clone Youtube',
+    description: 'Description of Project 4',
     image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
-    liveDemo: 'https://devchretien-portfolio.vercel.app/',
-    badges: ['Fashion', 'Products'],
+    liveDemo: '',
+    badges: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS'],
   },
   {
     id: 5,
-    title: 'Project 5',
-    description: 'Description of Project 2',
+    title: 'Project Clone Tweeter(x)',
+    description: 'Description of Project 5',
     image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
-    liveDemo: 'https://devchretien-portfolio.vercel.app/',
-    badges: ['Fashion', 'Products'],
+    liveDemo: '',
+    badges: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS'],
   },
+
   // Add more projects as needed
 ])
 </script>
