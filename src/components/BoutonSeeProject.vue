@@ -7,8 +7,9 @@
   </div>
 
   <!-- Modale -->
-  <div v-if="showModal" class="fixed inset-0 flex items-center justify-center bg-black/50">
-    <div class="bg-background p-6 rounded-lg shadow-lg w-80">
+
+  <div v-if="showModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    <div class="bg-background p-6 rounded-lg shadow-lg w-80 relative z-60">
       <h2 class="text-lg font-bold">Lien indisponible</h2>
       <p class="mt-2">Ce projet n’a pas encore de démonstration en ligne.</p>
       <div class="mt-4 flex justify-end">
