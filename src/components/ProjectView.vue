@@ -43,6 +43,11 @@
 <script setup>
 import { ref } from 'vue'
 import BoutonSeeProject from './BoutonSeeProject.vue'
+import img1 from '@/assets/img/img_project/sunnyside.png'
+import img2 from '@/assets/img/img_project/portfolio.png'
+import img3 from '@/assets/img/img_project/clonenetflix.png'
+import img4 from '@/assets/img/img_project/youtube.png'
+import img5 from '@/assets/img/img_project/clonex.png'
 
 const projects = ref([
   {
@@ -50,7 +55,7 @@ const projects = ref([
     title: 'Projet Portfolio',
     description:
       'Création d’un site web statique en HTML et CSS dans le cadre de mes premières semaines de formation à Kadea. Ce projet m’a permis d’apprendre à structurer une page web et à la styliser, en mettant en pratique les bases du développement front-end',
-    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    image: img2,
     liveDemo: 'https://two025-dev-matin-projet-portfolio.onrender.com',
     badges: ['HTML', 'CSS'],
   },
@@ -59,33 +64,34 @@ const projects = ref([
     title: 'Project SunySide',
     description:
       "Sunnyside est une agence créative à service complet spécialisée dans l'aide à la croissance rapide des marques. Ce projet est une page de destination pour l'agence Sunnyside, utilisant 'Frontend Mentor' comme source d'inspiration.",
-    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    image: img1,
     liveDemo: 'https://sunny-side-agency.onrender.com',
     badges: ['HTML', 'CSS'],
   },
   {
     id: 3,
     title: 'Project Clone Netflix',
-    description: 'Description of Project 3',
-    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    description:
+      'J’ai réalisé un clone de l’interface Netflix en utilisant uniquement HTML et CSS, afin de renforcer mes compétences en intégration web.',
+    image: img3,
     liveDemo: '',
-    badges: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS'],
+    badges: ['HTML', 'CSS'],
   },
   {
     id: 4,
     title: 'Project Clone Youtube',
     description: 'Description of Project 4',
-    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    image: img4,
     liveDemo: '',
-    badges: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS'],
+    badges: ['HTML', 'Tailwind CSS'],
   },
   {
     id: 5,
     title: 'Project Clone Tweeter(x)',
     description: 'Description of Project 5',
-    image: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+    image: img5,
     liveDemo: '',
-    badges: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Tailwind CSS'],
+    badges: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
   },
 
   // Add more projects as needed
