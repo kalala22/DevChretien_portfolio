@@ -33,7 +33,7 @@ const listTechno = ref([
 </script>
 
 <template>
-  <div class="max-w-6xl mx-auto p-6">
+  <div class="max-w-6xl mx-auto p-6 md:max-w-7xl">
     <!-- Card -->
     <div class="bg-secondary shadow-lg rounded-2xl p-6">
       <h2 class="text-2xl font-bold text-center text-primary mb-10">Technologies que j'utilise</h2>
