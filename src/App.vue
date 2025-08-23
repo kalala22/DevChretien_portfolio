@@ -4,37 +4,32 @@ import Home from './components/HomeView.vue'
 import About from './components/AboutSectionView.vue'
 import Competence from './components/CompetenceView.vue'
 import Project from './components/ProjectView.vue'
-// import Contact from './components/ContactView.vue'
+import Contact from './components/ContactView.vue'
 </script>
-
 
 <template>
   <!-- Header components -->
-   <div>
-    
-      <Navbar/>
+  <div>
+    <Navbar />
     <div class="bg-background">
       <section id="home">
-         <Home />
+        <Home />
       </section>
       <section id="about">
-        <About/>
+        <About />
       </section>
       <section id="competence">
         <!-- Compétences section will go here -->
         <Competence />
       </section>
       <section id="project">
-        <!-- Projets section will go here --> 
+        <!-- Projets section will go here -->
         <Project />
       </section>
       <section id="contact">
         <!-- Contact section will go here -->
-        <!-- <Contact /> -->
+        <Contact />
       </section>
     </div>
-    
-   </div>
+  </div>
 </template>
-
-
