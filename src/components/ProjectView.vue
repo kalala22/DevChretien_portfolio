@@ -7,16 +7,19 @@
 
   <section id="project" class="flex flex-col items-center bg-background">
     <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto p-6 md:rounded-lg shadow-xl bg-secondary max-w-5xl"
+      class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto p-6 md:rounded-lg shadow-xl bg-secondary max-w-7xl"
     >
       <div
         v-for="(project, indexProjects) in projects"
         :key="indexProjects"
         class="card bg-background w-full shadow-sm"
       >
-        <figure>
-          <img :src="project.image" alt="Project Image" />
-        </figure>
+        <div class="rounded-lg w-full h-48 overflow-hidden shadow-black/50 shadow-lg">
+          <figure>
+            <img :src="project.image" alt="Project Image" class="rounded-lg object-fill" />
+          </figure>
+        </div>
+
         <div class="card-body">
           <h2 class="card-title">{{ project.title }}</h2>
           <p class="text-decoration">
@@ -48,6 +51,7 @@ import img2 from '@/assets/img/img_project/portfolio.png'
 import img3 from '@/assets/img/img_project/clonenetflix.png'
 import img4 from '@/assets/img/img_project/youtube.png'
 import img5 from '@/assets/img/img_project/clonex.png'
+import img6 from '@/assets/img/img_project/figma.jpg'
 
 const projects = ref([
   {
@@ -92,6 +96,15 @@ const projects = ref([
     image: img5,
     liveDemo: '',
     badges: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
+  },
+
+  {
+    id: 6,
+    title: 'Maquette Design',
+    description: 'Description of Project 6',
+    image: img6,
+    liveDemo: '',
+    badges: ['Figma'],
   },
 
   // Add more projects as needed
