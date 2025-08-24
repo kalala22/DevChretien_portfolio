@@ -14,6 +14,7 @@ export default {
         accent: '#500F1C', // Red
         background: '#0D1520', // Blue
         decoration: '#C2E6FF', // Light Gray
+        base_border: '#205D9E', // Dark Gray
       },
     },
   },

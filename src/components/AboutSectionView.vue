@@ -10,14 +10,23 @@
       </h2>
     </div>
 
-    <div>
+    <motion.div
+      :initial="{ opacity: 0, scale: 0 }"
+      :animate="{ opacity: 1, scale: 1 }"
+      :transition="{
+        duration: 0.6,
+        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 },
+      }"
+    >
       <p class="text-primary text-lg md:text-2xl text-center mt-4 max-w-2xl">
         <span class="underline decoration-decoration">Développeur web fullstack</span> passionné, je
         conçois des applications modernes et interactives en alliant front-end, back-end et sens du
         design. Créatif et polyvalent, mon expérience en photographie et graphisme apporte une
         touche visuelle unique à mes projets.
       </p>
-    </div>
+    </motion.div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { motion } from 'motion-v'
+</script>

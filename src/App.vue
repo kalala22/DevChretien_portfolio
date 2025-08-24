@@ -5,6 +5,7 @@ import About from './components/AboutSectionView.vue'
 import Competence from './components/CompetenceView.vue'
 import Project from './components/ProjectView.vue'
 import Contact from './components/ContactView.vue'
+import FooterView from './components/FooterView.vue'
 </script>
 
 <template>
@@ -30,6 +31,10 @@ import Contact from './components/ContactView.vue'
         <!-- Contact section will go here -->
         <Contact />
       </section>
+      <footer>
+        <!-- Footer content will go here -->
+        <FooterView />
+      </footer>
     </div>
   </div>
 </template>
