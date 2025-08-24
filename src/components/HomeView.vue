@@ -1,6 +1,7 @@
 <script setup>
 import myPic from '@/assets/img/my_pic.png'
 import BoutonCv from '@/components/BoutonCv.vue'
+import BoutonCallMe from '@/components/BoutonCallMe.vue'
 import { ref, onMounted } from 'vue'
 
 const isLoaded = ref(false)
@@ -27,12 +28,7 @@ onMounted(() => {
             Explorez mes projets et compétences pour en savoir plus sur mon travail.
           </p>
           <div class="flex flex-row sm:flex-row justify-center md:justify-start gap-4">
-            <button
-              class="bg-red-600 text-white px-2 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
-            >
-              <font-awesome-icon icon="envelope" />
-              Contactez-moi
-            </button>
+            <BoutonCallMe />
             <BoutonCv />
           </div>
         </div>
