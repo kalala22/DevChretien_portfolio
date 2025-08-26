@@ -1,23 +1,23 @@
 <template>
-  <div id="contact" class="flex flex-col items-center justify-center bg-secondary h-1/2 mt-10">
+  <div id="contact" class="flex flex-col items-center justify-center bg-base-300 h-1/2 mt-10">
     <div class="absolute flex items-center justify-center opacity-10">
       <font-awesome-icon icon="paper-plane" class="text-primary text-[15rem] md:text-[15rem]" />
     </div>
 
     <div class="mt-20">
-      <h2 class="text-primary text-3xl md:text-5xl text-center uppercase">
+      <h2 class="text-3xl md:text-5xl text-center uppercase">
         Contactez <span class="font-extrabold">Moi</span>
       </h2>
     </div>
 
     <div>
-      <p class="text-primary text-lg md:text-2xl text-center mt-4 max-w-2xl">
+      <p class="text-lg md:text-2xl text-center mt-4 max-w-2xl">
         Vous avez un projet en tête ou souhaitez simplement discuter ? N'hésitez pas à me contacter.
         Je suis toujours ouvert aux nouvelles opportunités et collaborations.
       </p>
     </div>
 
-    <div class="bg-background w-full flex justify-center mt-5">
+    <div class="w-full flex justify-center mt-5">
       <div class="w-full mt-10 p-6">
         <form @submit.prevent="sendMessage" class="max-w-3xl mx-auto pt-8">
           <div class="grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-10 md:mb-20 mb-8">
@@ -29,7 +29,7 @@
                 v-model="form.prenom"
                 type="text"
                 placeholder="Entrez votre prénom"
-                class="w-full py-3 md:text-xl border-b focus:border-base_border transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-background/10"
+                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
                 required
               />
             </div>
@@ -42,7 +42,7 @@
                 v-model="form.nom"
                 type="text"
                 placeholder="Entrez votre nom"
-                class="w-full py-3 md:text-xl border-b focus:border-base_border transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-background/10"
+                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
                 required
               />
             </div>
@@ -55,7 +55,7 @@
                 v-model="form.email"
                 type="email"
                 placeholder="Entrez votre adresse mail"
-                class="w-full py-3 md:text-xl border-b focus:border-base_border transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-background/10"
+                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
                 required
               />
             </div>
@@ -71,7 +71,7 @@
                 type="tel"
                 pattern="^\+?[0-9]{8,15}$"
                 placeholder="Entrez votre numéro de téléphone"
-                class="w-full py-3 md:text-xl border-b focus:border-base_border transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-background/10"
+                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
               />
             </div>
           </div>
@@ -83,7 +83,7 @@
               v-model="form.message"
               rows="4"
               placeholder="Écrivez votre message"
-              class="w-full py-3 md:text-xl border-b focus:border-base_border transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none bg-background/10"
+              class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none bg-base-300"
               required
             ></textarea>
           </div>
