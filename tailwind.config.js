@@ -8,18 +8,12 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
-      colors: {
-        primary: '#C2E6FF',
-        secondary: '#1D232A',
-        accent: '#500F1C',
-        background: '#1D232A',
-        decoration: '#C2E6FF',
-      },
+      colors: {},
     },
   },
 
   plugins: [daisyui],
   daisyui: {
-    themes: ['light', 'dark'],
+    themes: ['light', 'dark', 'black', 'cupcake', 'winter'],
   },
 }

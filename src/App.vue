@@ -10,7 +10,7 @@ import FooterView from './components/FooterView.vue'
 
 <template>
   <!-- Header components -->
-  <div class="bg-base-600">
+  <div class="">
     <Navbar />
     <div>
       <section id="home">
