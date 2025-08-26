@@ -44,86 +44,156 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="bg-secondary sticky top-0 z-50 shadow-md">
+  <header class="sticky top-0 z-50 shadow-sm bg-base-100 md:px-[15%]">
     <!-- 
       Conteneur principal avec une largeur max et centré.
       Le padding est maintenant responsive : petit sur mobile, plus grand sur desktop.
     -->
-    <nav
-      class="flex items-center justify-between w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4"
-    >
+    <nav class="flex items-center justify-between w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <!-- Logo à gauche (ne change pas) -->
       <div>
-        <a href="#" class="text-2xl font-bold text-white">
+        <a href="#" class="text-2xl font-bold neutral">
           <span class="text-red-600">Dev</span>Chretien
         </a>
       </div>
 
-      <div class="">
-        <!-- Espace réservé pour aligner le logo et le bouton hamburger -->
-        <label class="swap swap-rotate">
-          <input type="checkbox" class="toggle" :checked="theme === 'dark'" @change="toggleTheme" />
-          <!-- Optionnel : ajoutez des icônes de soleil et de lune pour un meilleur visuel -->
-          <svg
-            class="swap-on fill-current w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29l.71-.71a1,1,0,0,0-1.41-1.41l-.71.71A1,1,0,0,0,5.64,7.05ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM20,12a1,1,0,0,0-1-1H18a1,1,0,0,0,0,2h1A1,1,0,0,0,20,12ZM17,5.64a1,1,0,0,0,.71-.29l.71-.71a1,1,0,1,0-1.41-1.41l-.71.71a1,1,0,0,0,0,1.41A1,1,0,0,0,17,5.64ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z"
-            />
-          </svg>
-          <svg
-            class="swap-off fill-current w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M21.64,13.5A1,1,0,0,0,20.5,12,9,9,0,0,1,12,3a9,9,0,0,0,9,9,1,1,0,0,0,1-1A1,1,0,0,0,21.64,13.5ZM12,21A9,9,0,0,1,3,12,9,9,0,0,0,12,21Z"
-            />
-          </svg>
-        </label>
-      </div>
-
       <!-- Liens de navigation pour le bureau (Desktop) -->
       <!-- 'hidden md:flex' : caché sur mobile, devient un flex container à partir de la taille 'md' -->
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden md:flex items-center font-semibold space-x-8">
         <div
           v-for="link in links"
           :key="link.name"
-          class="text-primary text-lg border-b-2 border-transparent hover:border-red-600 transition-colors duration-300"
+          class="text-lg border-b-2 border-transparent hover:border-red-600 transition-colors duration-300"
         >
           <a :href="link.href">{{ link.name }}</a>
+        </div>
+        <div class="flex items-center">
+          <label class="swap swap-rotate">
+            <!-- Le checkbox invisible qui gère l'état -->
+            <input type="checkbox" :checked="theme === 'dark'" @change="toggleTheme" />
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-sun swap-off fill-current w-7 h-7 text-base-content"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon-star-icon swap-on fill-current w-7 h-7 text-base-content"
+            >
+              <path d="M18 5h4" />
+              <path d="M20 3v4" />
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              />
+            </svg>
+          </label>
         </div>
       </div>
 
       <!-- Bouton Hamburger pour le mobile -->
       <!-- 'md:hidden' : visible uniquement sur les écrans plus petits que 'md' -->
-      <div class="md:hidden">
-        <button @click="toggleMenu" class="text-primary focus:outline-none">
+      <div class="md:hidden flex flex-row-reverse gap-5 items-center">
+        <button @click="toggleMenu" class="neutral focus:outline-none">
           <div class="text-3xl">
             <!-- Icône Hamburger -->
             <font-awesome-icon :icon="isMenuOpen ? 'x' : 'bars'" />
           </div>
         </button>
+        <div class="flex items-center">
+          <label class="swap swap-rotate">
+            <!-- Le checkbox invisible qui gère l'état -->
+            <input type="checkbox" :checked="theme === 'dark'" @change="toggleTheme" />
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-sun swap-off fill-current w-7 h-7 text-base-content"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon-star-icon swap-on fill-current w-7 h-7 text-base-content"
+            >
+              <path d="M18 5h4" />
+              <path d="M20 3v4" />
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              />
+            </svg>
+          </label>
+        </div>
       </div>
     </nav>
 
     <!-- Menu Mobile en plein écran (Overlay) -->
     <!-- 'v-if="isMenuOpen"' : ce bloc n'existe dans le DOM que si le menu est ouvert -->
-    <transition name="fade-in">
+    <transition name="slide-down">
       <div
         v-if="isMenuOpen"
-        class="md:hidden bg-secondary fixed top-50 left-0 w-full h-[calc(100%-40px)] flex flex-col items-center justify-center gap-5"
+        class="md:hidden bg-base-100 fixed top-16 left-0 w-full h-[calc(100%-40px)] flex flex-col items-center justify-center gap-5"
       >
-        <div v-for="link in links" :key="link.name" class="text-primary text-3xl font-bold">
+        <div v-for="link in links" :key="link.name" class="text-3xl font-bold">
           <!-- Cliquer sur un lien ferme aussi le menu -->
           <!-- <div class="absolute top-4 right-4">
             <button @click="toggleMenu" class="text-primary focus:outline-none">
               <font-awesome-icon icon="x" />
             </button>
           </div> -->
-          <a :href="link.href" class="text-primary text-3xl font-bold" @click="toggleMenu">
+          <a :href="link.href" class="text-3xl font-bold" @click="toggleMenu">
             {{ link.name }}
           </a>
         </div>
@@ -132,20 +202,30 @@ onMounted(() => {
   </header>
 </template>
 
-<style>
-.fade-in-enter-from {
+<style scoped>
+/* Définit la durée et la courbe de vitesse pour l'entrée et la sortie */
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.4s ease-out;
+}
+
+/* 
+  État de DÉPART pour l'entrée (le menu est caché en haut et invisible)
+  État de FIN pour la sortie (le menu retourne en haut et disparaît)
+*/
+.slide-down-enter-from,
+.slide-down-leave-to {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(-100%);
 }
 
-/* L'état de FIN de l'animation */
-.fade-in-enter-to {
+/* 
+  État de FIN pour l'entrée (le menu est à sa place et visible)
+  État de DÉPART pour la sortie
+*/
+.slide-down-enter-to,
+.slide-down-leave-from {
   opacity: 1;
-  transform: translateY(0px);
-}
-
-/* La durée et la courbe de l'animation */
-.fade-in-enter-active {
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Une transition avec un petit effet "ressort" */
+  transform: translateY(0);
 }
 </style>
