@@ -12,10 +12,29 @@ import {
   faEnvelope,
   faDownload,
   faCode,
+  faServer,
+  faPalette,
+  faCamera,
+  faImage,
+  faTasks,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faX, faBars, faTimes, faEnvelope, faGithub, faDownload, faCode, faEnvelope)
+library.add(
+  faX,
+  faBars,
+  faTimes,
+  faEnvelope,
+  faGithub,
+  faDownload,
+  faCode,
+  faEnvelope,
+  faServer,
+  faPalette,
+  faCamera,
+  faImage,
+  faTasks,
+)
 
 // Enregistrez le composant FontAwesomeIcon globalement
 
