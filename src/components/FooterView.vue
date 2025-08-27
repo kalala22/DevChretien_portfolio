@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-secondary text-white text-lg py-10 mt-10">
+  <footer class="text-lg py-10 mt-10">
     <div
       class="flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto text-center"
     >
@@ -58,6 +58,11 @@
       <div class="flex flex-col items-center gap-1">
         <a href="tel:+243993840811">+243 99 38 40 811</a>
         <a href="mailto:chretienkalala22@gmail.com">chretienkalala22@gmail.com</a>
+      </div>
+      <div class="px-9">
+        <p class="font-bold text-sm md:textlg">
+          Designed & Built by Chretien Kalala Copyright © 2025
+        </p>
       </div>
     </div>
   </footer>
