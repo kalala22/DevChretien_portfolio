@@ -95,7 +95,7 @@ const projects = ref([
             <span
               v-for="(badge, indexBadge) in project.badges"
               :key="indexBadge"
-              class="badge border bg-red-700 text-xs"
+              class="badge border bg-red-700 text-xs text-white"
             >
               {{ badge }}
             </span>
