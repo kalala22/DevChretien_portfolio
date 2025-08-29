@@ -204,10 +204,10 @@ const filterdTechno = computed(() => {
       <button
         @click="setFilter(tool)"
         :class="{
-          'bg-base-200': activeFilter === tool,
-          'bg-base-300 hover:bg-base-200': activeFilter !== tool,
+          'bg-red-700 text-white': activeFilter === tool,
+          'bg-base-300': activeFilter !== tool,
         }"
-        class="px-4 py-2 bg-base-300 hover:bg-base-200 text-decoration font-semibold rounded-full transition duration-300 ease-in-out"
+        class="px-4 py-2 neutral text-decoration font-semibold rounded-full transition duration-300 ease-in-out"
       >
         {{ tool }}
       </button>
