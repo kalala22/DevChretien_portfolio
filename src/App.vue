@@ -6,35 +6,38 @@ import Competence from './components/CompetenceView.vue'
 import Project from './components/ProjectView.vue'
 import Contact from './components/ContactView.vue'
 import FooterView from './components/FooterView.vue'
+import FloatingButtonLayout from './components/FloatingButtonLayout.vue'
 </script>
 
 <template>
   <!-- Header components -->
-  <div class="">
-    <Navbar />
-    <div>
-      <section id="home">
-        <Home />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="competence">
-        <!-- Compétences section will go here -->
-        <Competence />
-      </section>
-      <section id="project">
-        <!-- Projets section will go here -->
-        <Project />
-      </section>
-      <section id="contact">
-        <!-- Contact section will go here -->
-        <Contact />
-      </section>
-      <footer>
-        <!-- Footer content will go here -->
-        <FooterView />
-      </footer>
+  <FloatingButtonLayout>
+    <div class="">
+      <Navbar />
+      <div>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="competence">
+          <!-- Compétences section will go here -->
+          <Competence />
+        </section>
+        <section id="project">
+          <!-- Projets section will go here -->
+          <Project />
+        </section>
+        <section id="contact">
+          <!-- Contact section will go here -->
+          <Contact />
+        </section>
+        <footer>
+          <!-- Footer content will go here -->
+          <FooterView />
+        </footer>
+      </div>
     </div>
-  </div>
+  </FloatingButtonLayout>
 </template>
