@@ -1,9 +1,13 @@
 <template>
   <div
-    class="bg-red-700 text-white font-bold px-11 py-3 rounded-lg hover:bg-red-800 transition-colors duration-300 flex items-center gap-2 cursor-pointer"
+    class="relative bg-red-700 text-white font-bold px-11 pr-10 py-3 rounded-lg hover:bg-red-800 transition-colors duration-300 flex items-center gap-2 cursor-pointer"
     @click="handleClick"
   >
-    Voir le projet
+    <span>Voir le projet</span>
+    <font-awesome-icon
+      icon="arrow-up-right-from-square"
+      class="absolute top-2 right-2 text-sm opacity-70"
+    />
   </div>
 
   <!-- Modale -->
@@ -13,7 +17,7 @@
       <h2 class="text-lg font-bold">Lien indisponible</h2>
       <p class="mt-2">Ce projet n’a pas encore de démonstration en ligne.</p>
       <div class="mt-4 flex justify-end">
-        <button class="btn btn-sm btn-accent" @click="showModal = false">Fermer</button>
+        <button class="btn btn-sm bg-red-700 text-white" @click="showModal = false">Fermer</button>
       </div>
     </div>
   </div>
