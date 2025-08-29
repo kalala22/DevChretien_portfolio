@@ -45,9 +45,6 @@ const listSkills = ref([
 <template>
   <div class="">
     <section id="competence" class="flex flex-col items-center justify-center p-5 py-20">
-      <div class="absolute flex items-center justify-center opacity-10">
-        <font-awesome-icon icon="cogs" class="text-primary text-[15rem] md:text-[15rem]" />
-      </div>
       <div>
         <h2 class="neutral text-3xl md:text-5xl text-center uppercase">
           Mes <span class="font-extrabold">Compétences</span>
@@ -61,11 +58,13 @@ const listSkills = ref([
           l'intégration d'API.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:px-[15%]">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 mt-5 lg:grid-cols-3 gap-8 p-4 md:max-w-7xl md:mx-auto"
+      >
         <div
           v-for="skill in listSkills"
           :key="skill.title"
-          class="backdrop-blur-md bg-base-100/30 border border-base-300 rounded-lg p-6 shadow-lg hover:scale-[1.02] hover:border-red-600 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 ease-in-out flex flex-col text-center items-center"
+          class="bg-base-100/30 border border-base-300 rounded-lg p-6 hover:scale-[1.02] hover:border-red-600 transition-all duration-300 ease-in-out flex flex-col text-center items-center"
         >
           <!-- Amélioration 5: Ajout de l'icône -->
           <div class="text-4xl text-red-600 mb-4">
