@@ -1,9 +1,9 @@
 <template>
-  <div id="about" class="flex flex-col items-center bg-base-300 justify-center p-5">
+  <div id="about" class="flex flex-col items-center bg-base-300 justify-center p-5 mt-10">
     <!-- <div class="absolute flex items-center justify-center opacity-10">
       <font-awesome-icon icon="code" class="text-primary/20 text-[15rem] md:text-[15rem]" />
     </div> -->
-    <div class="mt-20">
+    <div class="pt-20">
       <h2 class="neutral text-3xl md:text-5xl text-center uppercase">
         À propos de <span class="font-extrabold">Moi</span>
       </h2>
@@ -28,7 +28,7 @@
       </div>
 
       <div class="mt-10">
-        <img :src="flatImage" alt="image plat dev" class="md:h-96 drop-shadow-xl" />
+        <img :src="flatImage" alt="image plat dev" class="md:h-96" />
       </div>
     </motion.div>
   </div>
