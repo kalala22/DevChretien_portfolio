@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative bg-red-700 text-white font-bold px-11 pr-10 py-3 rounded-lg hover:bg-red-800 transition-colors duration-300 flex items-center gap-2 cursor-pointer"
+    class="relative bg-red-600 text-white font-bold px-11 pr-10 py-3 rounded-lg hover:bg-red-700 transition-colors duration-300 flex items-center gap-2 cursor-pointer"
     @click="handleClick"
   >
     <span>Voir le projet</span>
