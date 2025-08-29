@@ -39,7 +39,8 @@ const projects = ref([
   {
     id: 4,
     title: 'Project Clone Youtube',
-    description: 'Description of Project 4',
+    description:
+      'Ce projet est un clone de YouTube développé avec HTML et Tailwind CSS. Il reproduit l’interface de la plateforme avec une page d’accueil responsive comprenant la barre de recherche, le menu latéral et l’affichage des vidéos. Ce travail m’a permis de renforcer mes compétences en intégration web et en utilisation de Tailwind CSS pour concevoir des interfaces modernes et adaptées à différents écrans.',
     image: img4,
     liveDemo: '',
     badges: ['HTML', 'Tailwind CSS'],
@@ -47,7 +48,8 @@ const projects = ref([
   {
     id: 5,
     title: 'Project Clone Tweeter(x)',
-    description: 'Description of Project 5',
+    description:
+      'Ce projet est un clone de Twitter (X) réalisé avec HTML, Tailwind CSS et JavaScript Vanilla. Il reprend les principales fonctionnalités de l’interface, comme la publication de tweets et l’affichage dynamique du contenu, tout en mettant en avant une mise en page responsive et moderne. Ce projet m’a permis de consolider mes compétences en intégration web et en manipulation du DOM avec JavaScript pur.',
     image: img5,
     liveDemo: '',
     badges: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS'],
@@ -56,7 +58,8 @@ const projects = ref([
   {
     id: 6,
     title: 'Maquette Design',
-    description: 'Description of Project 6',
+    description:
+      'Création de maquettes interactives sous Figma, présentant des interfaces modernes et cohérentes. Travail sur la mise en page, la palette de couleurs et l’expérience utilisateur pour offrir un design clair et attrayant.',
     image: img6,
     liveDemo: '',
     badges: ['Figma'],
@@ -72,17 +75,15 @@ const projects = ref([
   </div>
 
   <section id="project" class="flex flex-col items-center">
-    <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto p-6 md:rounded-lg shadow-xl max-w-7xl"
-    >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto p-6 max-w-7xl">
       <div
         v-for="(project, indexProjects) in projects"
         :key="indexProjects"
-        class="card w-full shadow-xl border border-base-200"
+        class="card bg-base-100 border border-base-300 hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-in-out"
       >
-        <div class="rounded-lg w-full h-48 overflow-hidden shadow-black/50 shadow-lg">
-          <figure>
-            <img :src="project.image" alt="Project Image" class="rounded-lg object-fill" />
+        <div class="rounded-lg w-full h-48 overflow-hidden">
+          <figure class="h-48">
+            <img :src="project.image" alt="Project Image" class="w-full h-full object-cover" />
           </figure>
         </div>
 
@@ -95,12 +96,12 @@ const projects = ref([
             <span
               v-for="(badge, indexBadge) in project.badges"
               :key="indexBadge"
-              class="badge border bg-red-700 text-xs text-white"
+              class="badge border border-red-600 text-xs"
             >
               {{ badge }}
             </span>
           </div>
-          <div class="card-actions justify-start">
+          <div class="card-actions justify-end mt-5">
             <BoutonSeeProject :url="project.liveDemo" />
           </div>
         </div>
