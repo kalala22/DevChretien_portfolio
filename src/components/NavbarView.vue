@@ -63,7 +63,16 @@ onMounted(() => {
         <div
           v-for="link in links"
           :key="link.name"
-          class="text-lg border-b-2 border-transparent hover:border-red-600 transition-colors duration-300"
+          :class="[
+            {
+              'bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors duration-300':
+                link.name === 'Contact',
+            },
+            {
+              'text-lg border-b-2 border-transparent hover:border-red-600 transition-colors duration-300':
+                link.name !== 'Contact',
+            },
+          ]"
         >
           <a :href="link.href">{{ link.name }}</a>
         </div>
