@@ -44,12 +44,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 shadow-sm bg-base-100 md:px-[15%]">
+  <header class="sticky top-0 z-50 shadow-sm bg-base-100 py-5">
     <!-- 
       Conteneur principal avec une largeur max et centré.
       Le padding est maintenant responsive : petit sur mobile, plus grand sur desktop.
     -->
-    <nav class="flex items-center justify-between w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <nav class="flex items-center justify-between mx-10 md:max-w-7xl md:mx-auto md:text-center">
       <!-- Logo à gauche (ne change pas) -->
       <div>
         <a href="#" class="text-2xl font-bold neutral">
