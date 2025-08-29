@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main id="home" class="flex items-center justify-center p-4">
+  <main id="home" class="flex items-center justify-center">
     <transition name="fade-in">
       <div v-if="isLoaded" class="flex flex-col md:flex-row items-center justify-between">
         <div class="text-center md:text-left space-y-4 order-2 md:order-1">

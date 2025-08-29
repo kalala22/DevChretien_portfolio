@@ -17,6 +17,7 @@ import {
   faCamera,
   faImage,
   faTasks,
+  faArrowUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -34,6 +35,7 @@ library.add(
   faCamera,
   faImage,
   faTasks,
+  faArrowUpRightFromSquare,
 )
 
 // Enregistrez le composant FontAwesomeIcon globalement
