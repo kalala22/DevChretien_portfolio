@@ -11,7 +11,7 @@
     </div>
 
     <div>
-      <p class="text-lg md:text-2xl text-center mt-4 max-w-2xl">
+      <p class="text-lg md:text-xl font-light text-center mt-4 max-w-2xl">
         Vous avez un projet en tête ou souhaitez simplement discuter ? N'hésitez pas à me contacter.
         Je suis toujours ouvert aux nouvelles opportunités et collaborations.
       </p>
@@ -29,7 +29,7 @@
                 v-model="form.prenom"
                 type="text"
                 placeholder="Entrez votre prénom"
-                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
+                class="w-full py-3 md:text-lg pl-2 border rounded-lg focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
                 required
               />
             </div>
@@ -42,7 +42,7 @@
                 v-model="form.nom"
                 type="text"
                 placeholder="Entrez votre nom"
-                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
+                class="w-full py-3 md:text-lg pl-2 border rounded-lg focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
                 required
               />
             </div>
@@ -55,14 +55,14 @@
                 v-model="form.email"
                 type="email"
                 placeholder="Entrez votre adresse mail"
-                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
+                class="w-full py-3 md:text-lg pl-2 border rounded-lg focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
                 required
               />
             </div>
 
             <!-- Téléphone -->
             <div>
-              <label class="block text-sm md:text-xl font-bold mb-2"
+              <label class="block text-sm md:text-lg pl-2 font-bold mb-2"
                 >VOTRE NUMERO DE TELEPHONE</label
               >
               <input
@@ -71,7 +71,7 @@
                 type="tel"
                 pattern="^\+?[0-9]{8,15}$"
                 placeholder="Entrez votre numéro de téléphone"
-                class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
+                class="w-full py-3 md:text-lg pl-2 border rounded-lg focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] bg-base-300"
               />
             </div>
           </div>
@@ -83,20 +83,51 @@
               v-model="form.message"
               rows="4"
               placeholder="Écrivez votre message"
-              class="w-full py-3 md:text-xl border-b focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none bg-base-300"
+              class="w-full py-3 md:text-xl pl-2 border rounded-lg focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none bg-base-300"
               required
             ></textarea>
+          </div>
+
+          <div
+            v-if="success"
+            class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative mb-6 text-left"
+            role="alert"
+          >
+            <strong class="font-bold">Message envoyé !</strong>
+            <span class="block sm:inline"> Merci, je vous répondrai dès que possible.</span>
+          </div>
+
+          <!-- Message d'Erreur -->
+          <div
+            v-if="error"
+            class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative mb-6 text-left"
+            role="alert"
+          >
+            <strong class="font-bold">Erreur !</strong>
+            <span class="block sm:inline"> Une erreur est survenue. Veuillez réessayer.</span>
           </div>
 
           <!-- Bouton -->
           <button
             type="submit"
-            class="w-full bg-[#c22e23] hover:bg-[#79140f] text-white py-3 font-bold shadow-md transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
+            :disabled="isLoading"
+            class="w-full rounded-lg bg-[#c22e23] hover:bg-[#79140f] text-white py-3 font-bold shadow-md transition-all duration-300 ease-in-out outline-none focus:scale-[1.02] flex items-center justify-center disabled:bg-gray-400 disabled:cursor-not-allowed disabled:scale-100"
           >
-            ENVOYEZ VOTRE MESSAGE
+            <!-- État de chargement -->
+            <span v-if="isLoading" class="flex items-center">
+              <font-awesome-icon icon="spinner" class="animate-spin mr-2" />
+              Envoi en cours...
+            </span>
+
+            <!-- État normal -->
+            <span v-else class="flex items-center">
+              ENVOYEZ VOTRE MESSAGE
+              <font-awesome-icon icon="envelope" class="ml-2" />
+            </span>
           </button>
         </form>
-        <dialog :open="success" class="modal">
+
+        <!-- <dialog :open="success" class="modal">
           <div class="modal-box">
             <h3 class="font-bold text-lg">✅ Merci !</h3>
             <p class="py-4">Votre message a bien été envoyé. Je vous répondrai dès que possible.</p>
@@ -105,7 +136,7 @@
             </div>
           </div>
           <form method="dialog" class="modal-backdrop" @click="success = false"></form>
-        </dialog>
+        </dialog> -->
       </div>
     </div>
   </div>
@@ -120,10 +151,14 @@ const form = ref({
   numero: '',
   message: '',
 })
-
+const isLoading = ref(false)
+const error = ref(false)
 const success = ref(false)
 
 const sendMessage = async () => {
+  isLoading.value = true
+  success.value = false
+  error.value = false
   try {
     const res = await fetch('https://formspree.io/f/xjkoqdpv', {
       method: 'POST',
@@ -133,20 +168,14 @@ const sendMessage = async () => {
     if (res.ok) {
       success.value = true
       form.value = { prenom: '', nom: '', email: '', numero: '', message: '' }
+    } else {
+      error.value = true
     }
   } catch (err) {
+    error.value = true
     console.error('Erreur :', err)
+  } finally {
+    isLoading.value = false
   }
 }
 </script>
-
-<!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
-<dialog id="my_modal_2" class="modal">
-  <div class="modal-box">
-    <h3 class="font-bold text-lg">Hello!</h3>
-    <p class="py-4">Press ESC key or click outside to close</p>
-  </div>
-  <form method="dialog" class="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog> -->
