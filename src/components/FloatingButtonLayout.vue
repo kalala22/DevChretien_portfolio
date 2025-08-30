@@ -6,18 +6,7 @@
     <!-- On enveloppe le bouton dans le composant <transition> de Vue -->
     <transition name="fade">
       <div v-show="showButton" class="fixed bottom-5 right-5">
-        <!-- Cas 1: On n'est pas en bas, on montre le lien vers la section contact -->
-        <a
-          v-if="!atBottom"
-          href="#contact"
-          class="bg-red-600 text-white w-full h-full p-5 rounded-full shadow-lg hover:bg-red-700 transition duration-300 flex items-center space-x-2"
-        >
-          <font-awesome-icon icon="envelope" />
-        </a>
-
-        <!-- Cas 2: On est en bas, on montre le bouton pour remonter -->
         <button
-          v-else
           @click="scrollTop"
           class="bg-red-600 text-white w-full h-full p-5 rounded-full shadow-lg hover:bg-red-700 transition duration-300 flex items-center space-x-2"
         >
