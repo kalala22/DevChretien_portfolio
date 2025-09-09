@@ -6,7 +6,6 @@
     class="relative border border-red-600 neutral font-bold px-6 pr-10 py-3 rounded-lg hover:bg-red-700 hover:text-white transition-colors duration-300 flex items-center"
   >
     <span>Voir mon CV</span>
-    <font-awesome-icon icon="download" />
 
     <font-awesome-icon
       icon="arrow-up-right-from-square"
