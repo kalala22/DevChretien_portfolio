@@ -1,6 +1,6 @@
 <template>
   <a
-    href="/CvFiles/CV_2025-08-29_Chretien_Kalala.pdf"
+    href="/CvFiles/CV_Chretien Kalala.pdf"
     target="_blank"
     rel="noopener noreferrer"
     class="relative border border-red-600 neutral font-bold px-6 pr-10 py-3 rounded-lg hover:bg-red-700 hover:text-white transition-colors duration-300 flex items-center"
