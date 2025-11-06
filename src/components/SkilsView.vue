@@ -16,6 +16,8 @@ import postgresqlIcon from '@/assets/skils_icons/postgresql.png'
 import viteIcon from '@/assets/skils_icons/vite.png'
 import typescriptIcon from '@/assets/skils_icons/typescript.png'
 import netlifyIcon from '@/assets/skils_icons/netlify.png'
+// import angularIcon from '@/assets/skils_icons/angular.png'
+import expressIcon from '@/assets/skils_icons/express-js.png'
 
 import { computed, ref } from 'vue'
 
@@ -59,6 +61,13 @@ const listTechno = ref([
     color: '#4FC08D',
     links: 'https://vuejs.org/',
     category: 'Frontend',
+  },
+  {
+    name: 'Express.js',
+    icon: expressIcon,
+    niveau: 'Débutant',
+    color: '#000000',
+    category: 'Backend',
   },
   {
     name: 'AdonisJS',
@@ -265,7 +274,7 @@ const filterdTechno = computed(() => {
 </template>
 
 <style>
-/* 
+/*
   1. Classes pour l'animation d'entrée et de sortie (fade + scale)
 */
 
@@ -289,7 +298,7 @@ const filterdTechno = computed(() => {
   transition: all 0.4s ease;
 }
 
-/* 
+/*
   2. Classe pour l'animation de mouvement (la magie de la fluidité !)
 */
 
@@ -298,7 +307,7 @@ const filterdTechno = computed(() => {
   transition: transform 0.5s ease;
 }
 
-/* 
+/*
   3. Assure que les éléments qui partent ne perturbent pas le layout
      pendant que les autres bougent.
 */

@@ -7,6 +7,7 @@ import img3 from '@/assets/img/img_project/clonenetflix.png'
 import img4 from '@/assets/img/img_project/youtube.png'
 import img5 from '@/assets/img/img_project/clonex.png'
 import img6 from '@/assets/img/img_project/figma.jpg'
+import img7 from '@/assets/img/img_project/lemonderural.png'
 
 const projects = ref([
   {
@@ -61,8 +62,18 @@ const projects = ref([
     description:
       'Création de maquettes interactives sous Figma, présentant des interfaces modernes et cohérentes. Travail sur la mise en page, la palette de couleurs et l’expérience utilisateur pour offrir un design clair et attrayant.',
     image: img6,
-    liveDemo: '',
+    liveDemo:
+      'https://www.figma.com/design/6UO2pnrYQMpzxGoEIS3T7p/Mes-Projets---Realisations--Copy-?node-id=0-1&t=4b6ISo5iZwQiLQZC-1',
     badges: ['Figma'],
+  },
+  {
+    id: 7,
+    title: 'Projet Le Monde Rural',
+    description:
+      "Développement d'un site web pour 'Le Monde Rural', une association dédiée à la promotion et au soutien des communautés rurales. Le site vise à fournir des informations, des ressources et une plateforme de communication pour les membres de l'association et le grand public.",
+    image: img7,
+    liveDemo: 'https://lemonderural.netlify.app',
+    badges: ['VueJs', 'Tailwind CSS'],
   },
 
   // Add more projects as needed
