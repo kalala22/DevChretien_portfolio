@@ -9,6 +9,7 @@ import img5 from '@/assets/img/img_project/clonex.png'
 import img6 from '@/assets/img/img_project/figma.jpg'
 import img7 from '@/assets/img/img_project/lemonderural.png'
 import img8 from '@/assets/img/img_project/todolist.png'
+import img9 from '@/assets/img/img_project/pokedex.png'
 
 const projects = ref([
   {
@@ -84,6 +85,15 @@ const projects = ref([
     image: img8,
     liveDemo: 'https://to-do-list-react-eta-sooty.vercel.app/',
     badges: ['ReactJs', 'CSS', 'TypeScript'],
+  },
+  {
+    id: 9,
+    title: 'Pokedex – Application React',
+    description:
+      'Application Pokedex développée avec React et l’API PokéAPI, permettant aux utilisateurs de rechercher et d’afficher des informations détaillées sur les Pokémon. Ce projet m’a permis de renforcer mes compétences en intégration d’API, en gestion d’état avec React (useState, useEffect) et en conception d’interfaces utilisateur réactives et attrayantes.',
+    image: img9,
+    liveDemo: 'https://pokedex-react-orcin-one.vercel.app/',
+    badges: ['ReactJs', 'Tailwind CSS', 'TypeScript'],
   },
 
   // Add more projects as needed
