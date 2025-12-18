@@ -8,6 +8,7 @@ import img4 from '@/assets/img/img_project/youtube.png'
 import img5 from '@/assets/img/img_project/clonex.png'
 import img6 from '@/assets/img/img_project/figma.jpg'
 import img7 from '@/assets/img/img_project/lemonderural.png'
+import img8 from '@/assets/img/img_project/todolist.png'
 
 const projects = ref([
   {
@@ -72,8 +73,17 @@ const projects = ref([
     description:
       "Développement d'un site web pour 'Le Monde Rural', une association dédiée à la promotion et au soutien des communautés rurales. Le site vise à fournir des informations, des ressources et une plateforme de communication pour les membres de l'association et le grand public.",
     image: img7,
-    liveDemo: 'https://lemonderural.netlify.app',
+    liveDemo: 'https://www.lemonderural.net',
     badges: ['VueJs', 'Tailwind CSS'],
+  },
+  {
+    id: 8,
+    title: 'Todo List – Application React',
+    description:
+      'Application de gestion de tâches développée avec React, permettant aux utilisateurs d’ajouter, modifier, supprimer et marquer des tâches comme complétées. Ce projet m’a permis de renforcer ma maîtrise des composants React, de la gestion d’état (useState) et de la logique interactive côté client, tout en appliquant de bonnes pratiques d’UI pour une expérience utilisateur simple et fluide.',
+    image: img8,
+    liveDemo: 'https://to-do-list-react-eta-sooty.vercel.app/',
+    badges: ['ReactJs', 'CSS', 'TypeScript'],
   },
 
   // Add more projects as needed
