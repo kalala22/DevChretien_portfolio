@@ -17,6 +17,7 @@ import viteIcon from '@/assets/skils_icons/vite.png'
 import typescriptIcon from '@/assets/skils_icons/typescript.png'
 import netlifyIcon from '@/assets/skils_icons/netlify.png'
 // import angularIcon from '@/assets/skils_icons/angular.png'
+import reactIcon from '@/assets/skils_icons/React-icon.svg'
 import expressIcon from '@/assets/skils_icons/express-js.png'
 
 import { computed, ref } from 'vue'
@@ -164,6 +165,14 @@ const listTechno = ref([
     color: '#014847',
     links: 'https://code.visualstudio.com/',
     category: 'Outils',
+  },
+  {
+    name: 'ReactJS',
+    icon: reactIcon,
+    niveau: 'Débutant',
+    color: '#61DAFB',
+    links: 'https://reactjs.org/',
+    category: 'Frontend',
   },
 ])
 
