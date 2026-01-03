@@ -45,7 +45,7 @@ onMounted(() => {
 
 <template>
   <header class="sticky top-0 z-50 shadow-sm bg-base-100 py-5">
-    <!-- 
+    <!--
       Conteneur principal avec une largeur max et centré.
       Le padding est maintenant responsive : petit sur mobile, plus grand sur desktop.
     -->
@@ -169,16 +169,23 @@ onMounted(() => {
     <transition name="slide-down">
       <div
         v-if="isMenuOpen"
-        class="md:hidden bg-base-100 fixed top-16 left-0 w-full h-[calc(100%-40px)] flex flex-col items-center justify-center gap-5"
+        class="md:hidden bg-base-100 fixed top-16 left-0 w-full py-10 flex flex-col items-center justify-center gap-5 shadow-md z-40"
       >
-        <div v-for="link in links" :key="link.name" class="text-3xl font-bold">
-          <!-- Cliquer sur un lien ferme aussi le menu -->
-          <!-- <div class="absolute top-4 right-4">
-            <button @click="toggleMenu" class="text-primary focus:outline-none">
-              <font-awesome-icon icon="x" />
-            </button>
-          </div> -->
-          <a :href="link.href" class="text-3xl font-bold" @click="toggleMenu">
+        <div
+          v-for="link in links"
+          :key="link.name"
+          :class="[
+            {
+              'bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors duration-300':
+                link.name === 'Contact',
+            },
+            {
+              'text-lg border-b-2 border-transparent hover:border-red-600 transition-colors duration-300':
+                link.name !== 'Contact',
+            },
+          ]"
+        >
+          <a :href="link.href" class="text-xl font-bold" @click="toggleMenu">
             {{ link.name }}
           </a>
         </div>
@@ -194,7 +201,7 @@ onMounted(() => {
   transition: all 0.4s ease-out;
 }
 
-/* 
+/*
   État de DÉPART pour l'entrée (le menu est caché en haut et invisible)
   État de FIN pour la sortie (le menu retourne en haut et disparaît)
 */
@@ -204,7 +211,7 @@ onMounted(() => {
   transform: translateY(-100%);
 }
 
-/* 
+/*
   État de FIN pour l'entrée (le menu est à sa place et visible)
   État de DÉPART pour la sortie
 */
