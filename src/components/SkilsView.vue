@@ -174,12 +174,21 @@ const listTechno = ref([
     links: 'https://reactjs.org/',
     category: 'Frontend',
   },
+  {
+    name: 'React Native',
+    icon: reactIcon,
+    niveau: 'Débutant',
+    color: '#61DAFB',
+    links: 'https://reactjs.org/',
+    category: 'Mobile App',
+  },
 ])
 
 const listToolsName = ref([
   'Toutes',
   'Frontend',
   'Backend',
+  'Mobile App',
   'Base de données',
   'UI/UX Design',
   'Outils',
