@@ -7,6 +7,7 @@ import Project from './components/ProjectView.vue'
 import Contact from './components/ContactView.vue'
 import FooterView from './components/FooterView.vue'
 import FloatingButtonLayout from './components/FloatingButtonLayout.vue'
+import Photographie from './components/PhotographieVue.vue'
 </script>
 
 <template>
@@ -28,6 +29,11 @@ import FloatingButtonLayout from './components/FloatingButtonLayout.vue'
         <section id="project">
           <!-- Projets section will go here -->
           <Project />
+        </section>
+
+        <!-- section Photographie -->
+        <section>
+          <Photographie />
         </section>
         <section id="contact">
           <!-- Contact section will go here -->
