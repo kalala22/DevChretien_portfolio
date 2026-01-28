@@ -10,6 +10,7 @@ import img6 from '@/assets/img/img_project/figma.jpg'
 import img7 from '@/assets/img/img_project/lemonderural.png'
 import img8 from '@/assets/img/img_project/todolist.png'
 import img9 from '@/assets/img/img_project/pokedex.png'
+import img10 from '@/assets/img/img_project/portfolioPhotographe.png'
 
 const projects = ref([
   {
@@ -94,6 +95,15 @@ const projects = ref([
     image: img9,
     liveDemo: 'https://pokedex-react-orcin-one.vercel.app/',
     badges: ['ReactJs', 'Tailwind CSS', 'TypeScript'],
+  },
+  {
+    id: 10,
+    title: 'Portfolio Photographe',
+    description:
+      'Développement d’un portfolio en ligne pour un photographe, mettant en valeur ses œuvres à travers une galerie d’images interactive et responsive. Le site inclut des sections pour la biographie, les services proposés et un formulaire de contact, offrant ainsi une expérience utilisateur fluide et immersive.',
+    image: img10,
+    liveDemo: 'https://photographer-porfolio-one.vercel.app/',
+    badges: ['React', 'Tailwind CSS', 'TypeScript'],
   },
 
   // Add more projects as needed
